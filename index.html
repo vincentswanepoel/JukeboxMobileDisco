@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jukebox Mobile Disco - Your Event, Transformed!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212; /* Dark background inspired by James Smith Academy */
+            color: #e0e0e0; /* Light text for dark mode */
+            overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif; /* Keep Poppins for headings for impact */
+        }
+        /* Color Palette based on original logo, slightly adjusted for contrast on dark */
+        .text-primary-blue { color: #5B92E5; } /* Slightly brighter blue */
+        .bg-primary-blue { background-color: #5B92E5; }
+        .border-primary-blue { border-color: #5B92E5; }
+        .text-secondary-purple { color: #A083E8; } /* Slightly brighter purple */
+        .bg-secondary-purple { background-color: #A083E8; }
+        .border-secondary-purple { border-color: #A083E8; }
+        
+        .btn-primary {
+            background-color: #FF6B00; /* Vibrant orange accent color */
+            color: #ffffff;
+            font-weight: 700;
+            padding: 1rem 2.5rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+        }
+        .btn-primary:hover {
+            background-color: #E65C00;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4);
+        }
+
+        /* Custom class for extra large WhatsApp button */
+        .btn-whatsapp-xl {
+            background-color: #25D366; /* WhatsApp green */
+            color: white;
+            font-size: 2.25rem; /* text-4xl */
+            padding: 1.5rem 3.5rem; /* Larger padding */
+            border-radius: 0.75rem; /* More rounded */
+            font-weight: 900; /* Extra bold */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5); /* Green shadow */
+            animation: pulse-whatsapp 2s infinite ease-in-out; /* Specific pulse for WhatsApp */
+            width: fit-content; /* Adjust width to content */
+            margin: 0 auto; /* Center the button */
+        }
+        .btn-whatsapp-xl:hover {
+            background-color: #1DA851; /* Darker green on hover */
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.7);
+        }
+        /* Specific pulse animation for WhatsApp button */
+        @keyframes pulse-whatsapp {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+            }
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 10px 30px rgba(37, 211, 102, 0.8);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+            }
+        }
+
+
+        .feature-icon {
+            font-size: 3rem;
+            line-height: 1;
+            color: #FF6B00; /* Accent color for icons */
+        }
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4); /* Darker shadow for dark mode */
+        }
+        .promo-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+        }
+        .promo-image-small {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        .price-card {
+            background-color: #1c1c1c; /* Slightly lighter dark background for cards */
+            border: 1px solid #333; /* Subtle border */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.4); /* Darker shadow for dark mode */
+        }
+        .price-card.featured {
+            border-color: #FF6B00; /* Accent border for featured card */
+            box-shadow: 0 0 30px rgba(255, 107, 0, 0.4);
+        }
+        .price-card .price-text {
+            font-size: 3.5rem; /* Larger price text */
+            font-weight: 900; /* Extra bold */
+            color: #FF6B00; /* Accent color for price */
+        }
+        .section-bg-dark {
+            background-color: #1a1a1a;
+        }
+        .section-bg-light {
+            background-color: #121212;
+        }
+
+        /* Custom Animations inspired by Reels */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+            }
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 8px 20px rgba(255, 107, 0, 0.5);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+            }
+        }
+
+        .animate-fade-in-up {
+            opacity: 0; /* Hidden by default */
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Staggered animation delays */
+        .animate-delay-100 { animation-delay: 0.1s; }
+        .animate-delay-200 { animation-delay: 0.2s; }
+        .animate-delay-300 { animation-delay: 0.3s; }
+        .animate-delay-400 { animation-delay: 0.4s; }
+        .animate-delay-500 { animation-delay: 0.5s; }
+        .animate-delay-600 { animation-delay: 0.6s; }
+        .animate-delay-700 { animation-delay: 0.7s; }
+        .animate-delay-800 { animation-delay: 0.8s; }
+        .animate-delay-900 { animation-delay: 0.9s; }
+        .animate-delay-1000 { animation-delay: 1s; }
+
+        .btn-pulse {
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        /* Initial hidden state for elements that will animate on scroll */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Top Bar -->
+    <header class="bg-[#1c1c1c] py-4 shadow-md">
+        <div class="container mx-auto px-4 flex items-center justify-center">
+            <img src="https://i.postimg.cc/TPgvp371/Screenshot-2023-01-28-at-17-30-07.png" alt="Jukebox Mobile Disco Logo" class="h-16 w-auto rounded-md">
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 section-bg-light text-center text-gray-100">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight animate-fade-in-up">
+                Unlock <span class="text-primary-blue animate-fade-in-up animate-delay-200">Unforgettable Energy</span>: Flawless Sound & Lighting for <span class="text-secondary-purple animate-fade-in-up animate-delay-400">Any Event.</span>
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in-up animate-delay-600">
+                Jukebox Mobile Disco guarantees a perfectly crafted atmosphere, delivering premium audio-visual experiences that elevate your corporate event, birthday party, or special celebration.
+                <span class="font-bold text-red-400 block mt-2 animate-fade-in-up animate-delay-600">We focus on DJ music, sound, and lights ONLY. No screens, no hosts, and no MC services. 🚫</span>
+            </p>
+
+            <!-- Hero Image: A stunning transformation (conceptual placeholder) -->
+            <div class="mt-12 rounded-xl overflow-hidden shadow-2xl reveal-on-scroll">
+                <img src="https://placehold.co/1200x600/2d3748/cbd5e0?text=YOUR+VENUE+TRANSFORMED!+BEFORE+%26+AFTER+OR+WOW+EFFECT" alt="Venue transformation by Jukebox Mobile Disco" class="w-full h-auto object-cover">
+            </div>
+
+            <div class="mt-12 p-6 bg-primary-blue text-white rounded-xl shadow-lg max-w-2xl mx-auto reveal-on-scroll">
+                <h2 class="text-2xl md:text-3xl font-bold mb-3">Your Event, Our Promise: Unbeatable Value. 🌟</h2>
+                <ul class="text-lg md:text-xl font-light space-y-2">
+                    <li class="animate-fade-in-up animate-delay-700">✔️ Super Clear Sound. 🔊</li>
+                    <li class="animate-fade-in-up animate-delay-800">✔️ Fun Lights That Make People Dance. 🎉</li>
+                    <li class="animate-fade-in-up animate-delay-900">✔️ Easy Setup, No Worries. ✅</li>
+                    <li class="animate-fade-in-up animate-delay-1000">✔️ <span class="font-bold text-yellow-300">Love Your Event Vibe, Or Your Deposit Is On Us! 💯</span></li>
+                </ul>
+                <p class="mt-4 text-sm text-blue-100">
+                    *We're confident in our service, which is why we offer this promise. Powered by professional equipment and a team dedicated to your vision. Our guarantee ensures your peace of mind.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Agitation Section: "Are You Losing Sleep Over Your Next Event?" -->
+    <section class="py-16 md:py-24 section-bg-dark text-gray-100">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal-on-scroll">
+                Are You Losing Sleep Over Your Next Event? 😩
+            </h2>
+            <p class="text-center text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto reveal-on-scroll">
+                You're pouring your heart into planning, but deep down, are you dreading the possibility of...
+            </p>
+            <ul class="text-lg md:text-xl text-gray-300 space-y-6 list-none pl-0">
+                <li class="flex items-start reveal-on-scroll animate-delay-100">
+                    <span class="text-red-500 text-2xl mr-3">❌</span>
+                    <p>The **dread of muffled speeches or dead air** that makes your important messages fall flat? 🔇</p>
+                </li>
+                <li class="flex items-start reveal-on-scroll animate-delay-200">
+                    <span class="text-red-500 text-2xl mr-3">❌</span>
+                    <p>Watching your **dance floor empty out** because the music or lighting just isn't hitting right? 📉</p>
+                </li>
+                <li class="flex items-start reveal-on-scroll animate-delay-300">
+                    <span class="text-red-500 text-2xl mr-3">❌</span>
+                    <p>The **sheer panic of equipment failure** – a mic cutting out, lights flickering, or the sound system dying? 😱</p>
+                </li>
+                <li class="flex items-start reveal-on-scroll animate-delay-400">
+                    <span class="text-red-500 text-2xl mr-3">❌</span>
+                    <p>Worrying about **hidden costs or unreliable vendors** who add more stress than value? 💸</p>
+                </li>
+                <li class="flex items-start reveal-on-scroll animate-delay-500">
+                    <span class="text-red-500 text-2xl mr-3">❌</span>
+                    <p>The fear your event will be just **'another' one, not *the* one** everyone remembers? forgettable? 👻</p>
+                </li>
+            </ul>
+            <p class="text-center text-lg md:text-xl text-gray-300 mt-10 max-w-3xl mx-auto font-bold reveal-on-scroll">
+                You deserve an event that's seamless, vibrant, and talked about for all the right reasons. There's a better way to ensure your vision comes to life. ✨
+            </p>
+        </div>
+    </section>
+
+    <!-- Solution Section: "The Jukebox Solution: Your Event, Reimagined. Your Stress, Eliminated." -->
+    <section class="py-16 md:py-24 section-bg-light text-gray-100">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal-on-scroll">
+                The Jukebox Solution: Your Event, Reimagined. Your Stress, Eliminated. ✅
+            </h2>
+            <p class="text-center text-gray-300 text-lg mb-10 max-w-3xl mx-auto reveal-on-scroll">
+                We don't just provide equipment; we deliver peace of mind and an atmosphere that captivates. Here’s how we solve your biggest event worries:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md flex flex-col items-center text-center border-t-4 border-primary-blue reveal-on-scroll animate-delay-100">
+                    <div class="feature-icon">🎤</div>
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Crystal-Clear Audio, Always. 🔊</h3>
+                    <p class="text-gray-300">
+                        No more muffled speeches. Our professional sound systems and wireless microphones ensure every word, every note, is heard perfectly.
+                    </p>
+                </div>
+                <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md flex flex-col items-center text-center border-t-4 border-secondary-purple reveal-on-scroll animate-delay-200">
+                    <div class="feature-icon">🎉</div>
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Electrifying Dance Floors. ✨</h3>
+                    <p class="text-gray-300">
+                        Our dynamic lighting and expert DJ sets transform any space into an irresistible party zone, keeping your guests engaged and dancing all night.
+                    </p>
+                </div>
+                <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md flex flex-col items-center text-center border-t-4 border-primary-blue reveal-on-scroll animate-delay-300">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Zero Technical Headaches. ⚙️</h3>
+                    <p class="text-gray-300">
+                        With meticulous setup, advanced mixing consoles, and robust backup plans, we guarantee flawless execution. You relax, we handle the technical magic.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Packages -->
+    <section class="py-16 md:py-24 section-bg-light text-gray-100">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal-on-scroll">
+                Our Flexible Packages: Find Your Perfect Vibe! 🎶
+            </h2>
+            <p class="text-center text-gray-300 text-lg mb-10 max-w-3xl mx-auto reveal-on-scroll">
+                We offer tailored solutions to fit every event size and budget. Each package is designed to deliver maximum impact and a stress-free experience. 🥳
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Option 1 -->
+                <div class="price-card p-6 rounded-lg shadow-xl border-t-4 border-primary-blue reveal-on-scroll animate-delay-100">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4">Option 1 ✨</h3>
+                    <p class="price-text mb-6">FROM R4 500</p>
+                    <p class="text-gray-300 text-lg mb-4">For a single venue setup, perfect for intimate gatherings or focused presentations.</p>
+                    <ul class="text-gray-300 space-y-2 text-base">
+                        <li class="flex items-center"><span>✔️</span> 2 x 15" Speakers</li>
+                        <li class="flex items-center"><span>✔️</span> 1 x 18" Subwoofer</li>
+                        <li class="flex items-center"><span>✔️</span> 4 Bar LED Lights</li>
+                        <li class="flex items-center"><span>✔️</span> Wireless Microphone</li>
+                        <li class="flex items-center"><span>✔️</span> Professional Setup & Sound Test</li>
+                        <li class="flex items-center"><span>✔️</span> Karaoke on Request (Add-on) 🎤</li>
+                    </ul>
+                </div>
+
+                <!-- Option 2 - Featured -->
+                <div class="price-card featured p-6 rounded-lg shadow-xl border-t-4 border-[#FF6B00] reveal-on-scroll animate-delay-200">
+                    <div class="text-center mb-4">
+                        <span class="inline-block bg-[#FF6B00] text-white text-sm font-bold px-3 py-1 rounded-full uppercase">Most Popular 🔥</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary-purple mb-4">Option 2 🌟</h3>
+                    <p class="price-text mb-6">FROM R8 500</p>
+                    <p class="text-gray-300 text-lg mb-4">Elevate the energy with enhanced lighting and effects for a lively atmosphere.</p>
+                    <ul class="text-gray-300 space-y-2 text-base">
+                        <li class="flex items-center"><span>✔️</span> 2 x 15" Speakers</li>
+                        <li class="flex items-center"><span>✔️</span> 2 x 18" Bass Speakers</li>
+                        <li class="flex items-center"><span>✔️</span> FX Lights & Lasers ✨</li>
+                        <li class="flex items-center"><span>✔️</span> Smoke Machine 💨</li>
+                        <li class="flex items-center"><span>✔️</span> UV Lights & Harburst 🌈</li>
+                        <li class="flex items-center"><span>✔️</span> 4 Bar LED Lights</li>
+                        <li class="flex items-center"><span>✔️</span> Professional Setup & Sound Test</li>
+                    </ul>
+                </div>
+
+                <!-- Option 3 -->
+                <div class="price-card p-6 rounded-lg shadow-xl border-t-4 border-primary-blue reveal-on-scroll animate-delay-300">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4">Option 3 🚀</h3>
+                    <p class="price-text mb-6">FROM R12 500</p>
+                    <p class="text-gray-300 text-lg mb-4">The full sensory experience for large events, ensuring maximum impact and unforgettable moments.</p>
+                    <ul class="text-gray-300 space-y-2 text-base">
+                        <li class="flex items-center"><span>✔️</span> 2 x 15" Speakers</li>
+                        <li class="flex items-center"><span>✔️</span> 2 x 18" Bass Speakers</li>
+                        <li class="flex items-center"><span>✔️</span> Lasers & FX Lights ✨</li>
+                        <li class="flex items-center"><span>✔️</span> Smoke Machine 💨</li>
+                        <li class="flex items-center"><span>✔️</span> 4 Bar LED Lights</li>
+                        <li class="flex items-center"><span>✔️</span> Dancing in the Clouds Smoke Machine ☁️</li>
+                        <li class="flex items-center"><span>✔️</span> Up Lighting 💡</li>
+                        <li class="flex items-center"><span>✔️</span> Professional Setup & Sound Test</li>
+                        <li class="flex items-center"><span>✔️</span> Packages can be customized! 💖</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center text-gray-400 text-sm mt-12 reveal-on-scroll">
+                *Provincial travel rates are excluded from current package rates and will be discussed with booking enquiry. R1 000 hourly rate to be charged past midnight. ⏰
+            </p>
+        </div>
+    </section>
+
+    <!-- Call to Action / Quote Form Section (Moved after Pricing) -->
+    <section id="quote-form" class="py-16 md:py-24 section-bg-dark text-gray-100 reveal-on-scroll">
+        <div class="container mx-auto px-4 max-w-xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+                Ready to Turn Your Vision into an Unforgettable Reality? 📝
+            </h2>
+            <p class="text-center text-gray-300 text-md mb-8">
+                Fill out this quick form to get your custom quote and start planning your stress-free, spectacular event. With our **Deposit-Back Promise**, your satisfaction is assured! ✅
+                <span class="font-bold text-red-400 block mt-4">
+                    *Please note: Travel costs outside of **Gauteng province** are extra. If your party goes past midnight, there's an extra R1 000 per hour. ⚠️
+                </span>
+            </p>
+            <form class="bg-[#1c1c1c] p-8 rounded-lg shadow-xl">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-100 text-sm font-bold mb-2">Full Name: 👤</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="Your Name" required>
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-100 text-sm font-bold mb-2">Email Address: 📧</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="you@example.com" required>
+                </div>
+                <div class="mb-6">
+                    <label for="phone" class="block text-gray-100 text-sm font-bold mb-2">Phone Number (Optional): 📱</label>
+                    <input type="tel" id="phone" name="phone" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="e.g., +27 82 123 4567">
+                </div>
+                <div class="mb-6">
+                    <label for="event_date" class="block text-gray-100 text-sm font-bold mb-2">When is your event? (Approximate Date): 📅</label>
+                    <input type="date" id="event_date" name="event_date" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue">
+                </div>
+                <div class="mb-6">
+                    <label for="event_type" class="block text-gray-100 text-sm font-bold mb-2">What kind of event is it? 🎉</label>
+                    <select id="event_type" name="event_type" class="shadow border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" required>
+                        <option value="">Choose Event Type</option>
+                        <option value="wedding">Wedding 👰🤵</option>
+                        <option value="16th_birthday">16th Birthday Party 🎂</option>
+                        <option value="corporate">Corporate Event 🏢</option>
+                        <option value="private_party">Private Party / Celebration 🥳</option>
+                        <option value="school_dance">School Dance / Prom 🎓</option>
+                        <option value="gala_fundraiser">Gala / Fundraiser 🎗️</option>
+                        <option value="other">Other (Please tell us below) 🌟</option>
+                    </select>
+                </div>
+
+                <!-- Conditional field for Wedding Sound Options -->
+                <div id="wedding_sound_options" class="mb-6 hidden bg-blue-900 p-4 rounded-lg border border-blue-700">
+                    <label class="block text-gray-100 text-sm font-bold mb-3">For Weddings, where do you need sound? 💒</label>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="sound_ceremony" name="sound_location[]" value="ceremony" class="form-checkbox h-5 w-5 text-primary-blue rounded">
+                            <label for="sound_ceremony" class="ml-2 text-gray-100">Sound for the Ceremony 💍</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="sound_canapes" name="sound_location[]" value="canapes" class="form-checkbox h-5 w-5 text-primary-blue rounded">
+                            <label for="sound_canapes" class="ml-2 text-gray-100">Sound for Canapés/Cocktail Hour 🍹</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="sound_venue" name="sound_location[]" value="venue" class="form-checkbox h-5 w-5 text-primary-blue rounded">
+                            <label for="sound_venue" class="ml-2 text-gray-100">Sound for Reception/Main Venue 🍽️</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label for="venue_location" class="block text-gray-100 text-sm font-bold mb-2">Where is your event? (City/Suburb): 📍</label>
+                    <input type="text" id="venue_location" name="venue_location" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="e.g., Benoni, Sandton" required>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="stairs_at_venue" class="block text-gray-100 text-sm font-bold mb-2">Are there stairs at the venue (for us to carry gear)? 🪜</label>
+                    <select id="stairs_at_venue" name="stairs_at_venue" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" required>
+                        <option value="">Choose...</option>
+                        <option value="yes">Yes 👍</option>
+                        <option value="no">No 👎</option>
+                        <option value="unsure">Not sure yet 🤔</option>
+                    </select>
+                </div>
+
+                <!-- Integrated Optional Enhancements (Step 10: Add Bonuses) -->
+                <div class="mb-6 bg-blue-900 p-4 rounded-lg border border-blue-700">
+                    <label class="block text-gray-100 text-sm font-bold mb-3">Want Extra Fun Add-ons? 🎉</label>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="add_karaoke" name="optional_addons[]" value="karaoke" class="form-checkbox h-5 w-5 text-primary-blue rounded">
+                            <label for="add_karaoke" class="ml-2 text-gray-100">Karaoke Fun (Want to sing?) 🎤</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="add_extra_mics" name="optional_addons[]" value="extra_mics" class="form-checkbox h-5 w-5 text-primary-blue rounded">
+                            <label for="add_extra_mics" class="ml-2 text-gray-100">Extra Mics (Need more mics for speakers?) 🎙️</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="add_second_system" name="optional_addons[]" value="second_system" class="form-checkbox h-5 w-5 text-primary-blue rounded">
+                            <label for="add_second_system" class="ml-2 text-gray-100">Second Sound System (For another area like a church?) ⛪</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label for="message" class="block text-gray-100 text-sm font-bold mb-2">Any Other Special Wishes? 🌟</label>
+                    <textarea id="message" name="message" rows="4" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="Tell us more if you have any extra details about your dream event."></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn-primary">
+                        Get Your Custom Quote Now! 🚀
+                    </button>
+                </div>
+            </form>
+            <p class="mt-8 text-center text-sm opacity-80">
+                Or for a faster response, WhatsApp us directly:
+                <a href="https://wa.me/YOURPHONENUMBER?text=Hi%2C%20I'd%20like%20to%20get%20a%20quote%20for%20my%20event." target="_blank" class="btn-whatsapp-xl">
+                    WhatsApp Now! 💬
+                </a>
+            </p>
+            <p class="mt-4 text-center text-sm opacity-80">
+                You can also call us directly: <a href="tel:+27833810184" class="underline hover:text-white">083 3810 184 📞</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- The Warning -->
+    <section class="py-16 section-bg-light text-center text-gray-100 reveal-on-scroll">
+        <div class="container mx-auto px-4 max-w-xl">
+            <h2 class="text-2xl md:text-3xl font-bold text-red-400 mb-6">
+                Don't Miss Out! Limited Slots Available! 🚨
+            </h2>
+            <p class="text-lg md:text-xl text-gray-300">
+                Our schedule fills up fast. If you're serious about making your event unforgettable, **act now** before they're all gone. 🏃‍♀️💨
+            </p>
+            <p class="mt-4 text-sm text-gray-400">
+                This special offer won't last forever. Book your date today! 🗓️
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1c1c1c] py-10 text-white text-center">
+        <div class="container mx-auto px-4">
+            <p class="text-sm">&copy; 2025 Jukebox Mobile Disco. All rights reserved. 🎶</p>
+            <p class="mt-2 text-xs">
+                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a> |
+                <a href="#" class="text-gray-400 hover:text-white">Terms & Conditions</a>
+            </p>
+            <!-- P.S. Copy -->
+            <p class="mt-4 text-sm text-gray-400 font-semibold">
+                P.S. Remember, your perfect event vibe is guaranteed. Get your free custom quote today and transform your next event with zero stress! ✨
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const eventTypeSelect = document.getElementById('event_type');
+            const weddingSoundOptions = document.getElementById('wedding_sound_options');
+
+            function toggleWeddingSoundOptions() {
+                if (eventTypeSelect.value === 'wedding') {
+                    weddingSoundOptions.classList.remove('hidden');
+                } else {
+                    weddingSoundOptions.classList.add('hidden');
+                }
+            }
+
+            // Set initial state on page load
+            toggleWeddingSoundOptions();
+
+            // Listen for changes in the event type dropdown
+            eventTypeSelect.addEventListener('change', toggleWeddingSoundOptions);
+
+            // Intersection Observer for reveal-on-scroll animations
+            const revealElements = document.querySelectorAll('.reveal-on-scroll');
+
+            const observerOptions = {
+                root: null, // viewport
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        // If you want the animation to play only once, uncomment the line below
+                        // observer.unobserve(entry.target);
+                    } else {
+                        // Optional: remove is-visible class when element scrolls out of view
+                        // entry.target.classList.remove('is-visible');
+                    }
+                });
+            }, observerOptions);
+
+            revealElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+
+</body>
+</html>
