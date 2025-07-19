@@ -137,35 +137,6 @@
             font-weight: 900; /* Extra bold */
             color: #FF6B00; /* Accent color for price */
         }
-        .faq-item {
-            border-bottom: 1px solid #333; /* Darker border for dark mode */
-        }
-        .faq-question {
-            cursor: pointer;
-            padding: 1.25rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            color: #e0e0e0; /* Light text */
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            padding: 0 0;
-            color: #b0b0b0; /* Lighter gray text */
-        }
-        .faq-answer.open {
-            max-height: 200px; /* Adjust based on max content height */
-            padding-bottom: 1.25rem;
-        }
-        .faq-arrow {
-            transition: transform 0.3s ease;
-        }
-        .faq-arrow.rotate {
-            transform: rotate(180deg);
-        }
         .section-bg-dark {
             background-color: #1a1a1a;
         }
@@ -231,27 +202,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-
-        /* Form submission messages */
-        .form-message {
-            margin-top: 1rem;
-            padding: 0.75rem 1.25rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
-        .form-message.success {
-            background-color: #28a745; /* Green */
-            color: white;
-            opacity: 1;
-        }
-        .form-message.error {
-            background-color: #dc3545; /* Red */
-            color: white;
-            opacity: 1;
-        }
     </style>
 </head>
 <body class="antialiased">
@@ -263,23 +213,14 @@
         </div>
     </header>
 
-    <!-- Call Out Your Audience -->
-    <section class="py-8 section-bg-dark text-center text-gray-100 reveal-on-scroll">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <p class="text-xl md:text-2xl font-bold text-yellow-300 uppercase animate-pulse">
-                PLANNING AN UNFORGETTABLE EVENT? YOU'VE COME TO THE RIGHT PLACE! 🚀
-            </p>
-        </div>
-    </section>
-
     <!-- Hero Section -->
     <section class="py-16 md:py-24 section-bg-light text-center text-gray-100">
         <div class="container mx-auto px-4 max-w-4xl">
             <h1 class="text-4xl md:text-6xl font-extrabold leading-tight animate-fade-in-up">
-                Your Event, Transformed. <br><span class="text-primary-blue animate-fade-in-up animate-delay-200">Effortless Brilliance, Guaranteed Vibe. ✨</span>
+                Unlock <span class="text-primary-blue animate-fade-in-up animate-delay-200">Unforgettable Energy</span>: Flawless Sound & Lighting for <span class="text-secondary-purple animate-fade-in-up animate-delay-400">Any Event.</span>
             </h1>
-            <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in-up animate-delay-400">
-                Stop worrying about boring parties or bad sound. Jukebox Mobile Disco makes your work event, party, or wedding truly amazing with perfect music and stunning lights.
+            <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in-up animate-delay-600">
+                Jukebox Mobile Disco guarantees a perfectly crafted atmosphere, delivering premium audio-visual experiences that elevate your corporate event, birthday party, or special celebration.
                 <span class="font-bold text-red-400 block mt-2 animate-fade-in-up animate-delay-600">We focus on DJ music, sound, and lights ONLY. No screens, no hosts, and no MC services. 🚫</span>
             </p>
 
@@ -294,175 +235,81 @@
                     <li class="animate-fade-in-up animate-delay-700">✔️ Super Clear Sound. 🔊</li>
                     <li class="animate-fade-in-up animate-delay-800">✔️ Fun Lights That Make People Dance. 🎉</li>
                     <li class="animate-fade-in-up animate-delay-900">✔️ Easy Setup, No Worries. ✅</li>
-                    <li class="animate-fade-in-up animate-delay-1000">✔️ <span class="font-bold text-yellow-300">Love Your Event Vibe, Or It's Free! 💯</span></li>
+                    <li class="animate-fade-in-up animate-delay-1000">✔️ <span class="font-bold text-yellow-300">Love Your Event Vibe, Or Your Deposit Is On Us! 💯</span></li>
                 </ul>
                 <p class="mt-4 text-sm text-blue-100">
-                    *Powered by professional equipment and a team dedicated to your vision. Our guarantee ensures your peace of mind.
+                    *We're confident in our service, which is why we offer this promise. Powered by professional equipment and a team dedicated to your vision. Our guarantee ensures your peace of mind and aims for a relationship that lasts beyond just one event.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Create Irresistible Intrigue (Bullet Copy) -->
+    <!-- Problem Agitation Section: "Are You Losing Sleep Over Your Next Event?" -->
     <section class="py-16 md:py-24 section-bg-dark text-gray-100">
         <div class="container mx-auto px-4 max-w-3xl">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal-on-scroll">
-                What You'll Discover: Secrets to an Epic Event! 🤫
+                Are You Losing Sleep Over Your Next Event? 😩
             </h2>
+            <p class="text-center text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto reveal-on-scroll">
+                You're pouring your heart into planning, but deep down, are you dreading the possibility of...
+            </p>
             <ul class="text-lg md:text-xl text-gray-300 space-y-6 list-none pl-0">
                 <li class="flex items-start reveal-on-scroll animate-delay-100">
-                    <span class="text-primary-blue text-2xl mr-3">✨</span>
-                    <p>The **little-known secret** to making your corporate event truly stand out, without breaking the bank. 💰</p>
+                    <span class="text-red-500 text-2xl mr-3">❌</span>
+                    <p>The **dread of muffled speeches or dead air** that makes your important messages fall flat? *(Like so many other events you've attended?)* 🔇</p>
                 </li>
                 <li class="flex items-start reveal-on-scroll animate-delay-200">
-                    <span class="text-secondary-purple text-2xl mr-3">💡</span>
-                    <p>How to get **crystal-clear sound** for every speech and every song, no matter the venue size.🎤</p>
+                    <span class="text-red-500 text-2xl mr-3">❌</span>
+                    <p>Watching your **dance floor empty out** because the music or lighting just isn't hitting right? *(A common issue with inexperienced providers.)* 📉</p>
                 </li>
                 <li class="flex items-start reveal-on-scroll animate-delay-300">
-                    <span class="text-primary-blue text-2xl mr-3">🎉</span>
-                    <p>The trick to creating an **electric dance floor** that keeps everyone engaged and having fun. 🕺💃</p>
+                    <span class="text-red-500 text-2xl mr-3">❌</span>
+                    <p>The **sheer panic of equipment failure** – a mic cutting out, lights flickering, or the sound system dying? *(A risk with non-professional setups.)* 😱</p>
                 </li>
                 <li class="flex items-start reveal-on-scroll animate-delay-400">
-                    <span class="text-secondary-purple text-2xl mr-3">✅</span>
-                    <p>Why our **money-back guarantee** means you have absolutely nothing to lose by trying us out. 🛡️</p>
+                    <span class="text-red-500 text-2xl mr-3">❌</span>
+                    <p>Worrying about **hidden costs or unreliable vendors** who add more stress than value? *(Unlike the transparent, professional service you deserve.)* 💸</p>
                 </li>
                 <li class="flex items-start reveal-on-scroll animate-delay-500">
-                    <span class="text-primary-blue text-2xl mr-3">🚀</span>
-                    <p>How to **eliminate event planning stress** related to sound and lighting, so you can focus on your guests.🧘‍♀️</p>
+                    <span class="text-red-500 text-2xl mr-3">❌</span>
+                    <p>The fear your event will be just **'another' one, not *the* one** everyone remembers? forgettable? *(Don't settle for average when you can have extraordinary.)* 👻</p>
                 </li>
             </ul>
+            <p class="text-center text-lg md:text-xl text-gray-300 mt-10 max-w-3xl mx-auto font-bold reveal-on-scroll">
+                You deserve an event that's seamless, vibrant, and talked about for all the right reasons. There's a better way to ensure your vision comes to life. ✨
+            </p>
         </div>
     </section>
 
-    <!-- What You Get Section (Detailing the "Product" / Service Components) -->
+    <!-- Solution Section: "The Jukebox Solution: Your Event, Reimagined. Your Stress, Eliminated." -->
     <section class="py-16 md:py-24 section-bg-light text-gray-100">
         <div class="container mx-auto px-4 max-w-5xl">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal-on-scroll">
-                What You Get: The Tools for an Amazing Event! 🛠️
+                The Jukebox Solution: Your Event, Reimagined. Your Stress, Eliminated. ✅
             </h2>
             <p class="text-center text-gray-300 text-lg mb-10 max-w-3xl mx-auto reveal-on-scroll">
-                See exactly what Jukebox Mobile Disco brings to make your event shine. This is how we turn your vision into a dazzling reality. ✨
+                We don't just provide equipment; we deliver peace of mind and an atmosphere that captivates. Here’s how our **unique mechanism** solves your biggest event worries, unlike those who fall short:
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md flex flex-col items-center text-center border-t-4 border-primary-blue reveal-on-scroll animate-delay-100">
-                    <img src="https://placehold.co/150x150/4F85E8/FFFFFF?text=PRO+SPEAKERS" alt="Professional Speakers" class="w-32 h-32 object-contain mb-4 rounded-full border-2 border-primary-blue">
-                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Powerful Sound Systems 🔊</h3>
-                    <p class="text-gray-300">Clear, strong speakers that fill your venue with perfect music and clear voices.</p>
+                    <div class="feature-icon">🎤</div>
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Crystal-Clear Audio, Always. 🔊</h3>
+                    <p class="text-gray-300">
+                        No more muffled speeches. Our professional sound systems (like JBL) and wireless microphones (like Shure) ensure every word, every note, is heard perfectly. This isn't just basic sound; it's precision audio.
+                    </p>
                 </div>
                 <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md flex flex-col items-center text-center border-t-4 border-secondary-purple reveal-on-scroll animate-delay-200">
-                    <img src="https://placehold.co/150x150/8A60E3/FFFFFF?text=DYNAMIC+LIGHTS" alt="Dynamic Lighting Setup" class="w-32 h-32 object-contain mb-4 rounded-full border-2 border-secondary-purple">
-                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Dazzling Light Shows ✨</h3>
-                    <p class="text-gray-300">Lasers, moving lights, and colorful uplighting that change the whole look and feel of your space.</p>
+                    <div class="feature-icon">🎉</div>
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Electrifying Dance Floors. ✨</h3>
+                    <p class="text-gray-300">
+                        Our dynamic lighting and expert DJ sets transform any space into an irresistible party zone, keeping your guests engaged and dancing all night. We bring the showmanship to your event!
+                    </p>
                 </div>
                 <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md flex flex-col items-center text-center border-t-4 border-primary-blue reveal-on-scroll animate-delay-300">
-                    <img src="https://placehold.co/150x150/4F85E8/FFFFFF?text=DJ+CONSOLE" alt="DJ Console" class="w-32 h-32 object-contain mb-4 rounded-full border-2 border-primary-blue">
-                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Seamless DJ Experience 🎧</h3>
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Zero Technical Headaches. ⚙️</h3>
                     <p class="text-gray-300">
-                        Our DJs know how to keep the music flowing. We set up all our gear carefully so your party runs smoothly. You relax, we handle the fun!
-                    </p>
-                </div>
-                <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md flex flex-col items-center text-center border-t-4 border-secondary-purple reveal-on-scroll animate-delay-400">
-                    <img src="https://placehold.co/150x150/8A60E3/FFFFFF?text=FOG+%26+BUBBLES" alt="Fog and Bubble Machines" class="w-32 h-32 object-contain mb-4 rounded-full border-2 border-secondary-purple">
-                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Magical Special Effects 💨🫧</h3>
-                    <p class="text-gray-300">Low-lying fog for dancing on clouds, and fun bubble machines for extra joy and wonder.</p>
-                </div>
-                <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md flex flex-col items-center text-center border-t-4 border-primary-blue reveal-on-scroll animate-delay-500">
-                    <img src="https://placehold.co/150x150/4F85E8/FFFFFF?text=WIRELESS+MIC" alt="Wireless Microphone" class="w-32 h-32 object-contain mb-4 rounded-full border-2 border-primary-blue">
-                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Clear Wireless Microphones 🎙️</h3>
-                    <p class="text-gray-300">For speeches, announcements, or even karaoke – your voice will be heard perfectly.</p>
-                </div>
-                <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md flex flex-col items-center text-center border-t-4 border-secondary-purple reveal-on-scroll animate-delay-600">
-                    <img src="https://placehold.co/150x150/8A60E3/FFFFFF?text=MIRRORBALL" alt="Mirrorball" class="w-32 h-32 object-contain mb-4 rounded-full border-2 border-secondary-purple">
-                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Sparkling Mirrorballs 🪩</h3>
-                    <p class="text-gray-300">Add a classic, elegant sparkle that fills the room with dancing lights, perfect for any celebration.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Give a Powerful Guarantee -->
-    <section class="py-16 md:py-24 section-bg-dark text-center text-gray-100 reveal-on-scroll">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-3xl md:text-4xl font-extrabold mb-8">
-                The Jukebox Promise: Your Event, Absolutely Perfect. <br><span class="text-yellow-300">Or Your Money Back. 💸</span>
-            </h2>
-            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-                We are so confident in our ability to deliver an unforgettable atmosphere and flawless execution that we take all the risk. If your event's vibe isn't everything we promised, you don't pay. It's that simple. ✅
-            </p>
-            <div class="mt-8">
-                <p class="text-sm text-gray-400">
-                    This isn't just a promise; it's our commitment to your complete satisfaction. 🤝
-                </p>
-                <p class="text-sm text-gray-400 mt-2">
-                    *Terms and conditions apply. Details provided with your custom quote.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Identify the Problem (Agitate the Pain) -->
-    <section class="py-16 md:py-24 section-bg-light text-gray-100">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal-on-scroll">
-                Are You Tired of Boring Events? 😩
-            </h2>
-            <p class="text-center text-gray-300 text-lg mb-10 max-w-3xl mx-auto reveal-on-scroll">
-                You want your event to be a huge success, but are you secretly worried about... 😟
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md reveal-on-scroll animate-delay-100">
-                    <div class="feature-icon">🔇</div>
-                    <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-100">Muffled Sound? 😠</h3>
-                    <p class="text-gray-300">Speeches no one can hear, music that sounds flat. Your message gets lost, and the energy drops.</p>
-                </div>
-                <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md reveal-on-scroll animate-delay-200">
-                    <div class="feature-icon">📉</div>
-                    <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-100">No Energy? 😴</h3>
-                    <p class="text-gray-300">A dull atmosphere, empty dance floors, and guests leaving early. Your event feels forgotten.</p>
-                </div>
-                <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md reveal-on-scroll animate-delay-300">
-                    <div class="feature-icon">🤯</div>
-                    <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-100">Event Headaches? 🤕</h3>
-                    <p class="text-gray-300">Worrying about equipment, setup, and technical issues. You need to relax and enjoy your own event!</p>
-                </div>
-            </div>
-            <p class="text-center text-gray-300 text-lg mt-10 max-w-3xl mx-auto font-bold reveal-on-scroll">
-                Do you wake up worrying about where your next clients or successful events will come from? Do you spend weekends stressing about work when you should be enjoying life?
-                <br>There's a better way. ✨
-            </p>
-        </div>
-    </section>
-
-    <!-- Provide Your Solution -->
-    <section class="py-16 md:py-24 section-bg-dark text-gray-100">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal-on-scroll">
-                Our Answer: Jukebox Mobile Disco Makes it Shine! ✅
-            </h2>
-            <p class="text-center text-gray-300 text-lg mb-10 max-w-3xl mx-auto reveal-on-scroll">
-                We set up everything for your event to be a big success. We make sure your message is heard, your place looks great, and everyone has a good time with our sound and lights. 🥳
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md border-t-4 border-primary-blue reveal-on-scroll animate-delay-100">
-                    <div class="feature-icon">🎤</div>
-                    <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-100">Crystal-Clear Audio 🔊</h3>
-                    <p class="text-gray-300">
-                        Our loud and clear music systems, plus good mics, mean everyone can hear talks and enjoy the songs. No more missing words!
-                    </p>
-                </div>
-                <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md border-t-4 border-secondary-purple reveal-on-scroll animate-delay-200">
-                    <div class="feature-icon">💡</div>
-                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Transformative Lighting ✨</h3>
-                    <p class="text-gray-300">
-                        We change your venue with colorful lights, cool laser shows, and special effects. We make it look exciting, elegant, or wild – just how you want it!
-                    </p>
-                </div>
-                <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md border-t-4 border-primary-blue reveal-on-scroll animate-delay-300">
-                    <img src="https://placehold.co/150x150/4F85E8/FFFFFF?text=DJ+CONSOLE" alt="DJ Console" class="w-32 h-32 object-contain mb-4 rounded-full border-2 border-primary-blue">
-                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Seamless DJ Experience 🎧</h3>
-                    <p class="text-gray-300">
-                        Our DJs know how to keep the music flowing. We set up all our gear carefully so your party runs smoothly. You relax, we handle the fun!
+                        With meticulous setup, advanced mixing consoles, and robust backup plans, we guarantee flawless execution. You relax, we handle the technical magic and deliver exceptional service from start to finish.
                     </p>
                 </div>
             </div>
@@ -483,11 +330,10 @@
                 <!-- Option 1 -->
                 <div class="price-card p-6 rounded-lg shadow-xl border-t-4 border-primary-blue reveal-on-scroll animate-delay-100">
                     <h3 class="text-2xl font-bold text-primary-blue mb-4">Option 1 ✨</h3>
-                    <p class="price-text mb-6">R4 500</p>
+                    <p class="price-text mb-6">FROM R4 500</p>
                     <p class="text-gray-300 text-lg mb-4">For a single venue setup, perfect for intimate gatherings or focused presentations.</p>
                     <ul class="text-gray-300 space-y-2 text-base">
                         <li class="flex items-center"><span>✔️</span> 2 x 15" Speakers</li>
-                        <li class="flex items-center"><span>✔️</span> 1 x 18" Subwoofer</li>
                         <li class="flex items-center"><span>✔️</span> 4 Bar LED Lights</li>
                         <li class="flex items-center"><span>✔️</span> Wireless Microphone</li>
                         <li class="flex items-center"><span>✔️</span> Professional Setup & Sound Test</li>
@@ -501,14 +347,14 @@
                         <span class="inline-block bg-[#FF6B00] text-white text-sm font-bold px-3 py-1 rounded-full uppercase">Most Popular 🔥</span>
                     </div>
                     <h3 class="text-2xl font-bold text-secondary-purple mb-4">Option 2 🌟</h3>
-                    <p class="price-text mb-6">R8 500</p>
-                    <p class="text-gray-300 text-lg mb-4">Elevate the energy with enhanced lighting and effects for a lively atmosphere.</p>
+                    <p class="price-text mb-6">FROM R8 500</p>
+                    <ul class="text-gray-300 text-lg mb-4">Elevate the energy with enhanced lighting and effects for a lively atmosphere.</p>
                     <ul class="text-gray-300 space-y-2 text-base">
                         <li class="flex items-center"><span>✔️</span> 2 x 15" Speakers</li>
                         <li class="flex items-center"><span>✔️</span> 2 x 18" Bass Speakers</li>
                         <li class="flex items-center"><span>✔️</span> FX Lights & Lasers ✨</li>
                         <li class="flex items-center"><span>✔️</span> Smoke Machine 💨</li>
-                        <li class="flex items-center"><span>✔️</span> UV Lights & Harburst 🌈</li>
+                        <li class="flex items-center"><span>✔️</span> UV Lights & Starburst 🌈</li>
                         <li class="flex items-center"><span>✔️</span> 4 Bar LED Lights</li>
                         <li class="flex items-center"><span>✔️</span> Professional Setup & Sound Test</li>
                     </ul>
@@ -517,18 +363,19 @@
                 <!-- Option 3 -->
                 <div class="price-card p-6 rounded-lg shadow-xl border-t-4 border-primary-blue reveal-on-scroll animate-delay-300">
                     <h3 class="text-2xl font-bold text-primary-blue mb-4">Option 3 🚀</h3>
-                    <p class="price-text mb-6">R12 500</p>
+                    <p class="price-text mb-6">FROM R12 500</p>
                     <p class="text-gray-300 text-lg mb-4">The full sensory experience for large events, ensuring maximum impact and unforgettable moments.</p>
                     <ul class="text-gray-300 space-y-2 text-base">
                         <li class="flex items-center"><span>✔️</span> 2 x 15" Speakers</li>
                         <li class="flex items-center"><span>✔️</span> 2 x 18" Bass Speakers</li>
                         <li class="flex items-center"><span>✔️</span> Lasers & FX Lights ✨</li>
                         <li class="flex items-center"><span>✔️</span> Smoke Machine 💨</li>
+                        <li class="flex items-center"><span>✔️</span> UV Lights & Starburst 🌈</li>
                         <li class="flex items-center"><span>✔️</span> 4 Bar LED Lights</li>
                         <li class="flex items-center"><span>✔️</span> Dancing in the Clouds Smoke Machine ☁️</li>
                         <li class="flex items-center"><span>✔️</span> Up Lighting 💡</li>
                         <li class="flex items-center"><span>✔️</span> Professional Setup & Sound Test</li>
-                        <li class="flex items-center"><span>✔️</span> Packages can be customized! 💖</li>
+                        <li class="flex items-center"><span>✔️</span> Packages can be customized!💖</li>
                     </ul>
                 </div>
             </div>
@@ -538,254 +385,38 @@
         </div>
     </section>
 
-    <!-- Extra Fun Section (Detailing Bonuses/Add-ons) -->
-    <section class="py-16 md:py-24 section-bg-dark text-gray-100">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal-on-scroll">
-                Extra Fun: Lights & Sounds That Wow! 🤩
-            </h2>
-            <p class="text-center text-gray-300 text-lg mb-10 max-w-3xl mx-auto reveal-on-scroll">
-                Want to make your event extra special? We have cool extras to make everyone smile and remember your party! 🎉
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md reveal-on-scroll animate-delay-100">
-                    <h3 class="text-xl font-semibold text-primary-blue mb-3">Sing Your Heart Out! (Karaoke) 🎤</h3>
-                    <img src="https://i.postimg.cc/j5SnRmc8/IMG-20220130-WA0032.jpg" alt="Karaoke setup in action" class="promo-image mb-4">
-                    <p class="text-gray-300">
-                        Our karaoke setup lets everyone sing their favorite songs. It's a fun way for your team to laugh and bond!
-                    </p>
-                </div>
-                <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md reveal-on-scroll animate-delay-200">
-                    <h3 class="text-xl font-semibold text-secondary-purple mb-3">Cool Smoke & Bubbles! 💨🫧</h3>
-                    <div class="flex flex-col space-y-4">
-                        <img src="https://i.postimg.cc/hv9HtypY/Jump-Party-Texas-Foggles-Foam-Bubble-Machine.jpg" alt="Smoke machine with bubbles" class="promo-image-small">
-                        <img src="https://i.postimg.cc/J0c2LyhV/1000-W-Low-Lying-Dry-Ice-Fog-Machine-Fogging-machine-Spray-for-Wedding-Stage-Sale-webp.avif" alt="Low-lying fog machine effect" class="promo-image-small">
-                    </div>
-                    <p class="text-gray-300 mt-4">
-                        We have special machines to make your event look and feel amazing:
-                        <ul class="list-disc list-inside ml-4 mt-2">
-                            <li><span class="font-medium">Low Fog:</span> Makes a cool "dancing on clouds" look. ☁️</li>
-                            <li><span class="font-medium">Bubble Machine:</span> Sends fun bubbles floating around. 🫧</li>
-                            <li><span class="font-medium">Smoke with Bubbles:</span> Mixes hazy smoke with bubbles for a special effect! ✨</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Proof (Our Work in Action) -->
-    <section class="py-16 md:py-24 section-bg-light text-gray-100">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal-on-scroll">
-                See Our Magic: Real Event Transformations! 📸
-            </h2>
-            <p class="text-center text-gray-300 text-lg mb-10 max-w-3xl mx-auto reveal-on-scroll">
-                Don't just imagine it—see it! These pictures show how Jukebox Mobile Disco makes different places look wonderful with our sound and lights. While these are our top examples, our **Money-Back Guarantee** ensures your confidence in *your* event's success. 💯
-            </p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-[#1c1c1c] rounded-lg overflow-hidden shadow-md reveal-on-scroll animate-delay-100">
-                    <img src="https://i.postimg.cc/QdKb39CB/FB-IMG-1607146941608-copy.jpg" alt="Corporate Gala Event Transformation" class="gallery-img">
-                    <div class="p-4">
-                        <h4 class="font-semibold text-lg text-gray-100">Fancy Gala Night 🥂</h4>
-                        <p class="text-sm text-gray-300 mt-1">See how plain rooms become elegant with our special lights.</p>
-                    </div>
-                </div>
-                <div class="bg-[#1c1c1c] rounded-lg overflow-hidden shadow-md reveal-on-scroll animate-delay-200">
-                    <img src="https://i.postimg.cc/JzXbFfYZ/2014-02-22-23-01-16.jpg" alt="Product Launch Event Transformation" class="gallery-img">
-                    <div class="p-4">
-                        <h4 class="font-semibold text-lg text-gray-100">New Product Unveiling 🚀</h4>
-                        <p class="text-sm text-gray-300 mt-1">Bright lights and strong sound make new products shine!</p>
-                    </div>
-                </div>
-                <div class="bg-[#1c1c1c] rounded-lg overflow-hidden shadow-md reveal-on-scroll animate-delay-300">
-                    <img src="https://i.postimg.cc/HkRD3ycB/Screenshot-2025-06-13-at-21-37-11.png" alt="Year-End Celebration Transformation" class="gallery-img">
-                    <div class="p-4">
-                        <h4 class="font-semibold text-lg text-gray-100">Big Year-End Party Fun 🎉</h4>
-                        <p class="text-sm text-gray-300 mt-1">We turn dance floors into lively, colorful places for celebration.</p>
-                    </div>
-                </div>
-                <div class="bg-[#1c1c1c] rounded-lg overflow-hidden shadow-md reveal-on-scroll animate-delay-400">
-                    <img src="https://i.postimg.cc/25GyVGXV/20220315-131431.jpg" alt="Conference Setup Transformation" class="gallery-img">
-                    <div class="p-4">
-                        <h4 class="font-semibold text-lg text-gray-100">Clear Conference Setup 📊</h4>
-                        <p class="text-sm text-gray-300 mt-1">Even simple meetings get clear sound and a good look from us.</p>
-                    </div>
-                </div>
-                <div class="bg-[#1c1c1c] rounded-lg overflow-hidden shadow-md reveal-on-scroll animate-delay-500">
-                    <img src="https://i.postimg.cc/VNV0L4hm/20220315-134329.jpg" alt="Awards Ceremony Transformation" class="gallery-img">
-                    <div class="p-4">
-                        <h4 class="font-semibold text-lg text-gray-100">Awards Night Glow 🏆</h4>
-                        <p class="text-sm text-gray-300 mt-1">We light up the stage for winners to shine brightly.</p>
-                    </div>
-                </div>
-                <div class="bg-[#1c1c1c] rounded-lg shadow-md overflow-hidden reveal-on-scroll animate-delay-600">
-                    <img src="https://i.postimg.cc/MpsvddqV/TRP-0039.jpg" alt="Team Building Event Transformation" class="gallery-img">
-                    <div class="p-4">
-                        <h4 class="font-semibold text-lg text-gray-100">Team Fun Day Upgrade 🤝</h4>
-                        <p class="text-sm text-gray-300 mt-1">Our lights and sound make team games and fun activities better.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Show Credentials (Why Choose Us) -->
-    <section class="py-16 md:py-24 section-bg-dark text-gray-100">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal-on-scroll">
-                Why Pick Jukebox Mobile Disco? Our Proven Difference. ⭐
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md reveal-on-scroll animate-delay-100">
-                    <h3 class="text-xl font-semibold text-primary-blue mb-3">Always Works Well! ✅</h3>
-                    <p class="text-gray-300">
-                        We plan carefully and use good equipment. Your event will go perfectly, every time.
-                    </p>
-                </div>
-                <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md reveal-on-scroll animate-delay-200">
-                    <h3 class="text-xl font-semibold text-secondary-purple mb-3">Made Just for You! 💖</h3>
-                    <p class="text-300">
-                        We make our sound and light plan fit your party's needs and how your company wants to look.
-                    </p>
-                </div>
-                <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md reveal-on-scroll animate-delay-300">
-                    <h3 class="text-xl font-semibold text-primary-blue mb-3">Your Company Will Look Great! 💼</h3>
-                    <p class="text-gray-300">
-                        Good DJ music, sound, and lights make your company look professional and leave a good feeling for everyone.
-                    </p>
-                </div>
-                <div class="bg-[#1c1c1c] p-6 rounded-lg shadow-md reveal-on-scroll animate-delay-400">
-                    <h3 class="text-xl font-semibold text-secondary-purple mb-3">No Stress for You! 😌</h3>
-                    <p class="text-gray-300">
-                        We handle all the music and light stuff. So your team can relax and enjoy the party!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section (Includes Guarantee FAQ) -->
-    <section class="py-16 md:py-24 section-bg-light text-gray-100">
-        <div class="container mx-auto px-4 max-w-3xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal-on-scroll">
-                Got Questions? We Have Answers! ❓
-            </h2>
-            <div class="space-y-4">
-                <div class="faq-item reveal-on-scroll animate-delay-100">
-                    <div class="faq-question">
-                        <span class="text-gray-100">What kind of events do you do? 🗓️</span>
-                        <svg class="faq-arrow w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="text-gray-300">We do all kinds of events! Work parties, weddings, birthdays, school dances, big celebrations, and more. If you need music, sound, and lights, we can help!</p>
-                    </div>
-                </div>
-                <div class="faq-item reveal-on-scroll animate-delay-200">
-                    <div class="faq-question">
-                        <span class="text-gray-100">What is included in Option 1? 📦</span>
-                        <svg class="faq-arrow w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="text-gray-300">Option 1 includes our professional DJ service, a high-quality sound system (2x 15" Speakers, 1x 18" Sub), a wireless microphone, and basic LED lighting (4 Bar LED lights). It's great for clear sound and simple lighting.</p>
-                    </div>
-                </div>
-                <div class="faq-item reveal-on-scroll animate-delay-300">
-                    <div class="faq-question">
-                        <span class="text-gray-100">Can I add Karaoke to any package? 🎤</span>
-                        <svg class="faq-arrow w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="text-gray-300">Yes! Karaoke is an extra add-on you can choose with any of our packages. Just let us know you want it when you ask for your quote.</p>
-                    </div>
-                </div>
-                <div class="faq-item reveal-on-scroll animate-delay-400">
-                    <div class="faq-question">
-                        <span class="text-gray-100">Are travel costs included in the price? 🛣️</span>
-                        <svg class="faq-arrow w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="text-gray-300">Travel costs outside our local area are extra. We will talk about these costs with you when you ask for your quote, so there are no surprises.</p>
-                    </div>
-                </div>
-                <div class="faq-item reveal-on-scroll animate-delay-500">
-                    <div class="faq-question">
-                        <span class="text-gray-100">What if my party goes past midnight? 🕛</span>
-                        <svg class="faq-arrow w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="text-gray-300">If your party goes past midnight, there is an extra charge of R1 000 per hour. We will make sure this is clear in your quote.</p>
-                    </div>
-                </div>
-                <div class="faq-item reveal-on-scroll animate-delay-600">
-                    <div class="faq-question">
-                        <span class="text-gray-100">What is your Money-Back Guarantee? 💰</span>
-                        <svg class="faq-arrow w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </div>
-                    <div class="faq-answer">
-                        <p class="text-gray-300">We promise your event's vibe will be absolutely perfect. If you are not satisfied with our service, we will refund your money. We are confident you'll love what we do!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action (Main CTA) -->
-    <section class="py-16 md:py-24 section-bg-dark text-white text-center reveal-on-scroll">
-        <div class="container mx-auto px-4 max-w-xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
-                Ready for an Event That Wows? ✨
-            </h2>
-            <p class="text-lg md:text-xl mb-8">
-                Experience the Jukebox difference with **zero risk**. Get your custom quote now! 🚀
-            </p>
-            <!-- Prominent WhatsApp Button -->
-            <a href="https://wa.me/27833810184?text=Hi%2C%20I'd%20like%20to%20get%20a%20quote%20for%20my%20event.%20My%20event%20is%20a%20%5Btype%20of%20event%5D%20on%20%5Bdate%5D%20in%20%5Bvenue%20location%5D." target="_blank" class="btn-primary inline-flex items-center justify-center btn-pulse">
-                <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2C7.03 2 3 6.04 3 11.04c0 1.62.43 3.16 1.25 4.51L3.17 21.03l5.05-1.32c1.25.68 2.66 1.04 4.07 1.04 5.01 0 9.04-4.04 9.04-9.04S17.05 2 12.04 2zM17.2 16.57c-.12.35-.74.65-1.07.69-.32.04-.64.02-.95-.08-.3-.1-.66-.25-.97-.47-.3-.21-.66-.5-.95-.82-.29-.32-.58-.72-.79-1.07-.21-.35-.02-.5-.07-.64-.04-.15-.35-.85-.49-1.2-.14-.35-.29-.3-.5-.31-.21-.01-.46-.01-.7-.01-.24 0-.64.08-.98.43-.34.34-1.28 1.25-1.28 3.05 0 1.8 1.31 3.53 1.5 3.75.19.22 2.54 4.09 6.26 5.37 3.72 1.29 3.72 2.11 3.94 2.25.21.14.4.15.77.1.37-.04 1.07-.44 1.22-.64.15-.2.35-.5.48-.75.13-.25.07-.47-.02-.64-.09-.17-.29-.3-.5-.49-.21-.19-.46-.29-.7-.38z"/></svg>
-                WhatsApp Us Now! 💬
-            </a>
-            <p class="mt-8 text-sm opacity-80">
-                Or fill out our detailed form below for a custom quote. 👇
-            </p>
-            <p class="mt-4 text-sm opacity-80">
-                You can also call us directly: <a href="tel:+27833810184" class="underline hover:text-white">083 3810 184 📞</a>
-            </p>
-        </div>
-    </section>
-
-    <!-- Detailed Quote Request Form Section -->
-    <section id="quote-form" class="py-16 md:py-24 section-bg-light text-gray-100 reveal-on-scroll">
+    <!-- Call to Action / Quote Form Section (Moved after Pricing) -->
+    <section id="quote-form" class="py-16 md:py-24 section-bg-dark text-gray-100 reveal-on-scroll">
         <div class="container mx-auto px-4 max-w-xl">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
-                Tell Us About Your Event! 📝
+                Ready to Turn Your Vision into an Unforgettable Reality? 📝
             </h2>
             <p class="text-center text-gray-300 text-md mb-8">
-                Fill out this form to get your special quote. With our **Money-Back Guarantee**, your satisfaction is assured! ✅
+                Fill out this quick form to get your custom quote and start planning your stress-free, spectacular event. With our **Deposit-Back Promise**, your satisfaction is assured! ✅
                 <span class="font-bold text-red-400 block mt-4">
-                    *Please note: Travel costs outside our area are extra. If your party goes past midnight, there's an extra R1 000 per hour. ⚠️
+                    *Please note: Travel costs outside of **Gauteng province** are extra. If your party goes past midnight, there's an extra R1 000 per hour. ⚠️
                 </span>
             </p>
-            <form id="contactForm" action="https://formspree.io/f/movljqdl" method="POST" class="bg-[#1c1c1c] p-8 rounded-lg shadow-xl">
+            <form class="bg-[#1c1c1c] p-8 rounded-lg shadow-xl">
                 <div class="mb-6">
                     <label for="name" class="block text-gray-100 text-sm font-bold mb-2">Full Name: 👤</label>
-                    <input type="text" id="name" name="Full Name" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="Your Name" required>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="Your Name" required>
                 </div>
                 <div class="mb-6">
                     <label for="email" class="block text-gray-100 text-sm font-bold mb-2">Email Address: 📧</label>
-                    <input type="email" id="email" name="Email Address" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="you@example.com" required>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="you@example.com" required>
                 </div>
                 <div class="mb-6">
                     <label for="phone" class="block text-gray-100 text-sm font-bold mb-2">Phone Number (Optional): 📱</label>
-                    <input type="tel" id="phone" name="Phone Number" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="e.g., +27 82 123 4567">
+                    <input type="tel" id="phone" name="phone" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="e.g., +27 82 123 4567">
                 </div>
                 <div class="mb-6">
                     <label for="event_date" class="block text-gray-100 text-sm font-bold mb-2">When is your event? (Approximate Date): 📅</label>
-                    <input type="date" id="event_date" name="Event Date" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue">
+                    <input type="date" id="event_date" name="event_date" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue">
                 </div>
                 <div class="mb-6">
                     <label for="event_type" class="block text-gray-100 text-sm font-bold mb-2">What kind of event is it? 🎉</label>
-                    <select id="event_type" name="Event Type" class="shadow border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" required>
+                    <select id="event_type" name="event_type" class="shadow border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" required>
                         <option value="">Choose Event Type</option>
                         <option value="wedding">Wedding 👰🤵</option>
                         <option value="16th_birthday">16th Birthday Party 🎂</option>
@@ -802,15 +433,15 @@
                     <label class="block text-gray-100 text-sm font-bold mb-3">For Weddings, where do you need sound? 💒</label>
                     <div class="space-y-2">
                         <div class="flex items-center">
-                            <input type="checkbox" id="sound_ceremony" name="Sound Location (Wedding)[]" value="ceremony" class="form-checkbox h-5 w-5 text-primary-blue rounded">
+                            <input type="checkbox" id="sound_ceremony" name="sound_location[]" value="ceremony" class="form-checkbox h-5 w-5 text-primary-blue rounded">
                             <label for="sound_ceremony" class="ml-2 text-gray-100">Sound for the Ceremony 💍</label>
                         </div>
                         <div class="flex items-center">
-                            <input type="checkbox" id="sound_canapes" name="Sound Location (Wedding)[]" value="canapes" class="form-checkbox h-5 w-5 text-primary-blue rounded">
+                            <input type="checkbox" id="sound_canapes" name="sound_location[]" value="canapes" class="form-checkbox h-5 w-5 text-primary-blue rounded">
                             <label for="sound_canapes" class="ml-2 text-gray-100">Sound for Canapés/Cocktail Hour 🍹</label>
                         </div>
                         <div class="flex items-center">
-                            <input type="checkbox" id="sound_venue" name="Sound Location (Wedding)[]" value="venue" class="form-checkbox h-5 w-5 text-primary-blue rounded">
+                            <input type="checkbox" id="sound_venue" name="sound_location[]" value="venue" class="form-checkbox h-5 w-5 text-primary-blue rounded">
                             <label for="sound_venue" class="ml-2 text-gray-100">Sound for Reception/Main Venue 🍽️</label>
                         </div>
                     </div>
@@ -818,12 +449,12 @@
 
                 <div class="mb-6">
                     <label for="venue_location" class="block text-gray-100 text-sm font-bold mb-2">Where is your event? (City/Suburb): 📍</label>
-                    <input type="text" id="venue_location" name="Venue Location" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="e.g., Benoni, Sandton" required>
+                    <input type="text" id="venue_location" name="venue_location" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="e.g., Benoni, Sandton" required>
                 </div>
                 
                 <div class="mb-6">
                     <label for="stairs_at_venue" class="block text-gray-100 text-sm font-bold mb-2">Are there stairs at the venue (for us to carry gear)? 🪜</label>
-                    <select id="stairs_at_venue" name="Stairs at Venue" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" required>
+                    <select id="stairs_at_venue" name="stairs_at_venue" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" required>
                         <option value="">Choose...</option>
                         <option value="yes">Yes 👍</option>
                         <option value="no">No 👎</option>
@@ -836,15 +467,15 @@
                     <label class="block text-gray-100 text-sm font-bold mb-3">Want Extra Fun Add-ons? 🎉</label>
                     <div class="space-y-2">
                         <div class="flex items-center">
-                            <input type="checkbox" id="add_karaoke" name="Optional Addons[]" value="karaoke" class="form-checkbox h-5 w-5 text-primary-blue rounded">
+                            <input type="checkbox" id="add_karaoke" name="optional_addons[]" value="karaoke" class="form-checkbox h-5 w-5 text-primary-blue rounded">
                             <label for="add_karaoke" class="ml-2 text-gray-100">Karaoke Fun (Want to sing?) 🎤</label>
                         </div>
                         <div class="flex items-center">
-                            <input type="checkbox" id="add_extra_mics" name="Optional Addons[]" value="extra_mics" class="form-checkbox h-5 w-5 text-primary-blue rounded">
+                            <input type="checkbox" id="add_extra_mics" name="optional_addons[]" value="extra_mics" class="form-checkbox h-5 w-5 text-primary-blue rounded">
                             <label for="add_extra_mics" class="ml-2 text-gray-100">Extra Mics (Need more mics for speakers?) 🎙️</label>
                         </div>
                         <div class="flex items-center">
-                            <input type="checkbox" id="add_second_system" name="Optional Addons[]" value="second_system" class="form-checkbox h-5 w-5 text-primary-blue rounded">
+                            <input type="checkbox" id="add_second_system" name="optional_addons[]" value="second_system" class="form-checkbox h-5 w-5 text-primary-blue rounded">
                             <label for="add_second_system" class="ml-2 text-gray-100">Second Sound System (For another area like a church?) ⛪</label>
                         </div>
                     </div>
@@ -852,20 +483,28 @@
 
                 <div class="mb-6">
                     <label for="message" class="block text-gray-100 text-sm font-bold mb-2">Any Other Special Wishes? 🌟</label>
-                    <textarea id="message" name="Special Wishes" rows="4" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="Tell us more if you have any extra details about your dream event."></textarea>
+                    <textarea id="message" name="message" rows="4" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="Tell us more if you have any extra details about your dream event."></textarea>
                 </div>
                 <div class="text-center">
                     <button type="submit" class="btn-primary">
                         Get Your Custom Quote Now! 🚀
                     </button>
                 </div>
-                <div id="formStatusMessage" class="form-message"></div>
             </form>
+            <p class="mt-8 text-center text-sm opacity-80">
+                Or for a faster response, WhatsApp us directly:
+                <a href="https://wa.me/YOURPHONENUMBER?text=Hi%2C%20I'd%20like%20to%20get%20a%20quote%20for%20my%20event." target="_blank" class="btn-whatsapp-xl">
+                    WhatsApp Now! 💬
+                </a>
+            </p>
+            <p class="mt-4 text-center text-sm opacity-80">
+                You can also call us directly: <a href="tel:+27833810184" class="underline hover:text-white">083 3810 184 📞</a>
+            </p>
         </div>
     </section>
 
     <!-- The Warning -->
-    <section class="py-16 section-bg-dark text-center text-gray-100 reveal-on-scroll">
+    <section class="py-16 section-bg-light text-center text-gray-100 reveal-on-scroll">
         <div class="container mx-auto px-4 max-w-xl">
             <h2 class="text-2xl md:text-3xl font-bold text-red-400 mb-6">
                 Don't Miss Out! Limited Slots Available! 🚨
@@ -898,8 +537,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             const eventTypeSelect = document.getElementById('event_type');
             const weddingSoundOptions = document.getElementById('wedding_sound_options');
-            const contactForm = document.getElementById('contactForm');
-            const formStatusMessage = document.getElementById('formStatusMessage');
 
             function toggleWeddingSoundOptions() {
                 if (eventTypeSelect.value === 'wedding') {
@@ -914,36 +551,6 @@
 
             // Listen for changes in the event type dropdown
             eventTypeSelect.addEventListener('change', toggleWeddingSoundOptions);
-
-            // FAQ Accordion
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                const answer = item.querySelector('.faq-answer');
-                const arrow = item.querySelector('.faq-arrow');
-
-                question.addEventListener('click', () => {
-                    // Close other open answers
-                    faqItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.querySelector('.faq-answer').classList.remove('open');
-                            otherItem.querySelector('.faq-answer').style.maxHeight = null;
-                            otherItem.querySelector('.faq-arrow').classList.remove('rotate');
-                        }
-                    });
-
-                    // Toggle current answer
-                    if (answer.classList.contains('open')) {
-                        answer.classList.remove('open');
-                        answer.style.maxHeight = null;
-                        arrow.classList.remove('rotate');
-                    } else {
-                        answer.classList.add('open');
-                        answer.style.maxHeight = answer.scrollHeight + "px"; // Set max-height to scrollHeight
-                        arrow.classList.add('rotate');
-                    }
-                });
-            });
 
             // Intersection Observer for reveal-on-scroll animations
             const revealElements = document.querySelectorAll('.reveal-on-scroll');
@@ -969,48 +576,6 @@
 
             revealElements.forEach(element => {
                 observer.observe(element);
-            });
-
-            // Formspree submission handling
-            contactForm.addEventListener('submit', async (e) => {
-                e.preventDefault(); // Prevent default form submission and page reload
-
-                const formData = new FormData(contactForm);
-                try {
-                    const response = await fetch(contactForm.action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json' // Important for Formspree to return JSON
-                        }
-                    });
-
-                    if (response.ok) {
-                        formStatusMessage.textContent = 'Thank you for your inquiry! We will get back to you shortly. ✨';
-                        formStatusMessage.classList.remove('error');
-                        formStatusMessage.classList.add('success');
-                        contactForm.reset(); // Clear the form
-                        // Hide the message after a few seconds
-                        setTimeout(() => {
-                            formStatusMessage.classList.remove('success');
-                            formStatusMessage.textContent = '';
-                        }, 5000);
-                    } else {
-                        const data = await response.json();
-                        if (data.errors) {
-                            formStatusMessage.textContent = 'Oops! Something went wrong: ' + data.errors.map(err => err.message).join(', ');
-                        } else {
-                            formStatusMessage.textContent = 'Oops! There was a problem sending your message. Please try again.';
-                        }
-                        formStatusMessage.classList.remove('success');
-                        formStatusMessage.classList.add('error');
-                    }
-                } catch (error) {
-                    console.error('Form submission error:', error);
-                    formStatusMessage.textContent = 'Oops! There was a network error. Please check your connection and try again.';
-                    formStatusMessage.classList.remove('success');
-                    formStatusMessage.classList.add('error');
-                }
             });
         });
     </script>
