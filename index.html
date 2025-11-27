@@ -202,6 +202,23 @@
             opacity: 1;
             transform: translateY(0);
         }
+        
+        /* Responsive 16:9 Container for VSL */
+        .responsive-video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio (9/16 * 100) */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.75rem; /* Apply border radius to the iframe/container */
+        }
+        .responsive-video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -224,9 +241,10 @@
                 <span class="font-bold text-red-400 block mt-2 animate-fade-in-up animate-delay-600">We focus on DJ music, sound, and lights ONLY. No screens, no hosts, and no MC services. 🚫</span>
             </p>
 
-            <!-- Hero Image: A stunning transformation (conceptual placeholder) -->
-            <div class="mt-12 rounded-xl overflow-hidden shadow-2xl reveal-on-scroll">
-                <img src="https://placehold.co/1200x600/2d3748/cbd5e0?text=YOUR+VENUE+TRANSFORMED!+BEFORE+%26+AFTER+OR+WOW+EFFECT" alt="Venue transformation by Jukebox Mobile Disco" class="w-full h-auto object-cover">
+            <!-- VSL Video Embed: High-Impact Video Sales Letter -->
+            <div class="mt-12 shadow-2xl reveal-on-scroll responsive-video-container">
+                <!-- Added autoplay=1 and mute=1 for VSL impact, as per best practice -->
+                <iframe src="https://www.youtube.com/embed/VV3-W69sUSA?si=qbolUHTPUX3lAvS_&amp;autoplay=1&amp;mute=1" title="YouTube video player (VSL)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
             <div class="mt-12 p-6 bg-primary-blue text-white rounded-xl shadow-lg max-w-2xl mx-auto reveal-on-scroll">
