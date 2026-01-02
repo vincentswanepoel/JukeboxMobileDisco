@@ -403,120 +403,27 @@
         </div>
     </section>
 
-    <!-- Call to Action / Quote Form Section (Moved after Pricing) -->
-    <section id="quote-form" class="py-16 md:py-24 section-bg-dark text-gray-100 reveal-on-scroll">
-        <div class="container mx-auto px-4 max-w-xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
-                Ready to Turn Your Vision into an Unforgettable Reality? 📝
+    <!-- Final CTA Section (WhatsApp Focused) -->
+    <section class="py-16 md:py-24 section-bg-dark text-center text-gray-100 reveal-on-scroll">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">
+                Ready to Secure Your Flawless Event? 🚀
             </h2>
-            <p class="text-center text-gray-300 text-md mb-8">
-                Fill out this quick form to get your custom quote and start planning your stress-free, spectacular event. With our **Deposit-Back Promise**, your satisfaction is assured! ✅
-                <span class="font-bold text-red-400 block mt-4">
-                    *Please note: Travel costs outside of **Gauteng province** are extra. If your party goes past midnight, there's an extra R1 000 per hour. ⚠️
-                </span>
+            <p class="text-lg md:text-xl text-gray-300 mb-10">
+                Skip the back-and-forth. Click below to WhatsApp us directly for an instant response and custom quote.
             </p>
-            <form class="bg-[#1c1c1c] p-8 rounded-lg shadow-xl">
-                <div class="mb-6">
-                    <label for="name" class="block text-gray-100 text-sm font-bold mb-2">Full Name: 👤</label>
-                    <input type="text" id="name" name="name" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="Your Name" required>
-                </div>
-                <div class="mb-6">
-                    <label for="email" class="block text-gray-100 text-sm font-bold mb-2">Email Address: 📧</label>
-                    <input type="email" id="email" name="email" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="you@example.com" required>
-                </div>
-                <div class="mb-6">
-                    <label for="phone" class="block text-gray-100 text-sm font-bold mb-2">Phone Number (Optional): 📱</label>
-                    <input type="tel" id="phone" name="phone" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="e.g., +27 82 123 4567">
-                </div>
-                <div class="mb-6">
-                    <label for="event_date" class="block text-gray-100 text-sm font-bold mb-2">When is your event? (Approximate Date): 📅</label>
-                    <input type="date" id="event_date" name="event_date" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue">
-                </div>
-                <div class="mb-6">
-                    <label for="event_type" class="block text-gray-100 text-sm font-bold mb-2">What kind of event is it? 🎉</label>
-                    <select id="event_type" name="event_type" class="shadow border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" required>
-                        <option value="">Choose Event Type</option>
-                        <option value="wedding">Wedding 👰🤵</option>
-                        <option value="16th_birthday">16th Birthday Party 🎂</option>
-                        <option value="corporate">Corporate Event 🏢</option>
-                        <option value="private_party">Private Party / Celebration 🥳</option>
-                        <option value="school_dance">School Dance / Prom 🎓</option>
-                        <option value="gala_fundraiser">Gala / Fundraiser 🎗️</option>
-                        <option value="other">Other (Please tell us below) 🌟</option>
-                    </select>
-                </div>
-
-                <!-- Conditional field for Wedding Sound Options -->
-                <div id="wedding_sound_options" class="mb-6 hidden bg-blue-900 p-4 rounded-lg border border-blue-700">
-                    <label class="block text-gray-100 text-sm font-bold mb-3">For Weddings, where do you need sound? 💒</label>
-                    <div class="space-y-2">
-                        <div class="flex items-center">
-                            <input type="checkbox" id="sound_ceremony" name="sound_location[]" value="ceremony" class="form-checkbox h-5 w-5 text-primary-blue rounded">
-                            <label for="sound_ceremony" class="ml-2 text-gray-100">Sound for the Ceremony 💍</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input type="checkbox" id="sound_canapes" name="sound_location[]" value="canapes" class="form-checkbox h-5 w-5 text-primary-blue rounded">
-                            <label for="sound_canapes" class="ml-2 text-gray-100">Sound for Canapés/Cocktail Hour 🍹</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input type="checkbox" id="sound_venue" name="sound_location[]" value="venue" class="form-checkbox h-5 w-5 text-primary-blue rounded">
-                            <label for="sound_venue" class="ml-2 text-gray-100">Sound for Reception/Main Venue 🍽️</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-6">
-                    <label for="venue_location" class="block text-gray-100 text-sm font-bold mb-2">Where is your event? (City/Suburb): 📍</label>
-                    <input type="text" id="venue_location" name="venue_location" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="e.g., Benoni, Sandton" required>
-                </div>
-                
-                <div class="mb-6">
-                    <label for="stairs_at_venue" class="block text-gray-100 text-sm font-bold mb-2">Are there stairs at the venue (for us to carry gear)? 🪜</label>
-                    <select id="stairs_at_venue" name="stairs_at_venue" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" required>
-                        <option value="">Choose...</option>
-                        <option value="yes">Yes 👍</option>
-                        <option value="no">No 👎</option>
-                        <option value="unsure">Not sure yet 🤔</option>
-                    </select>
-                </div>
-
-                <!-- Integrated Optional Enhancements (Step 10: Add Bonuses) -->
-                <div class="mb-6 bg-blue-900 p-4 rounded-lg border border-blue-700">
-                    <label class="block text-gray-100 text-sm font-bold mb-3">Want Extra Fun Add-ons? 🎉</label>
-                    <div class="space-y-2">
-                        <div class="flex items-center">
-                            <input type="checkbox" id="add_karaoke" name="optional_addons[]" value="karaoke" class="form-checkbox h-5 w-5 text-primary-blue rounded">
-                            <label for="add_karaoke" class="ml-2 text-gray-100">Karaoke Fun (Want to sing?) 🎤</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input type="checkbox" id="add_extra_mics" name="optional_addons[]" value="extra_mics" class="form-checkbox h-5 w-5 text-primary-blue rounded">
-                            <label for="add_extra_mics" class="ml-2 text-gray-100">Extra Mics (Need more mics for speakers?) 🎙️</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input type="checkbox" id="add_second_system" name="optional_addons[]" value="second_system" class="form-checkbox h-5 w-5 text-primary-blue rounded">
-                            <label for="add_second_system" class="ml-2 text-gray-100">Second Sound System (For another area like a church?) ⛪</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-6">
-                    <label for="message" class="block text-gray-100 text-sm font-bold mb-2">Any Other Special Wishes? 🌟</label>
-                    <textarea id="message" name="message" rows="4" class="shadow appearance-none border border-gray-600 rounded w-full py-3 px-4 bg-gray-800 text-gray-100 leading-tight focus:outline-none focus:shadow-outline focus:border-primary-blue" placeholder="Tell us more if you have any extra details about your dream event."></textarea>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="btn-primary">
-                        Get Your Custom Quote Now! 🚀
-                    </button>
-                </div>
-            </form>
-            <p class="mt-8 text-center text-sm opacity-80">
-                Or for a faster response, WhatsApp us directly:
-                <a href="https://wa.me/YOURPHONENUMBER?text=Hi%2C%20I'd%20like%20to%20get%20a%20quote%20for%20my%20event." target="_blank" class="btn-whatsapp-xl">
-                    WhatsApp Now! 💬
+            
+            <div class="flex flex-col items-center gap-6">
+                <a href="https://wa.me/27833810184?text=Hi%2C%20I'd%20like%20to%20get%20a%20quote%20for%20my%20event." target="_blank" class="btn-whatsapp-xl">
+                    <svg class="w-8 h-8 md:w-10 md:h-10 mr-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-2.203 0-4.004 1.812-4.004 4.015 0 2.219 1.801 4.016 4.004 4.016s4.004-1.797 4.004-4.016c0-2.203-1.801-4.015-4.004-4.015zm0 18C5.385 24.172 0 18.787 0 12.141 0 5.494 5.385.109 12.031.109s12.031 5.385 12.031 12.031c0 6.646-5.385 12.031-12.031 12.031zm0-22.031c-5.516 0-10 4.484-10 10s4.484 10 10 10 10-4.484 10-10-4.484-10-10-10z"/></svg>
+                    WHATSAPP US NOW!
                 </a>
-            </p>
-            <p class="mt-4 text-center text-sm opacity-80">
-                You can also call us directly: <a href="tel:+27833810184" class="underline hover:text-white">083 3810 184 📞</a>
+                <p class="text-gray-500 font-bold uppercase tracking-widest">OR CALL DIRECTLY</p>
+                <a href="tel:+27833810184" class="text-3xl font-black text-secondary-purple hover:underline">083 3810 184</a>
+            </div>
+
+            <p class="mt-12 text-sm text-red-500 font-bold animate-pulse">
+                🚨 NOTE: 2026 dates are filling up fast. Lock yours in before it's gone!
             </p>
         </div>
     </section>
@@ -539,37 +446,20 @@
     <!-- Footer -->
     <footer class="bg-[#1c1c1c] py-10 text-white text-center">
         <div class="container mx-auto px-4">
-            <p class="text-sm">&copy; 2025 Jukebox Mobile Disco. All rights reserved. 🎶</p>
+            <p class="text-sm">&copy; 2026 Jukebox Mobile Disco. All rights reserved. 🎶</p>
             <p class="mt-2 text-xs">
                 <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a> |
                 <a href="#" class="text-gray-400 hover:text-white">Terms & Conditions</a>
             </p>
             <!-- P.S. Copy -->
             <p class="mt-4 text-sm text-gray-400 font-semibold">
-                P.S. Remember, your perfect event vibe is guaranteed. Get your free custom quote today and transform your next event with zero stress! ✨
+                P.S. Remember, your perfect event vibe is guaranteed. Contact us today and transform your next event with zero stress! ✨
             </p>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const eventTypeSelect = document.getElementById('event_type');
-            const weddingSoundOptions = document.getElementById('wedding_sound_options');
-
-            function toggleWeddingSoundOptions() {
-                if (eventTypeSelect.value === 'wedding') {
-                    weddingSoundOptions.classList.remove('hidden');
-                } else {
-                    weddingSoundOptions.classList.add('hidden');
-                }
-            }
-
-            // Set initial state on page load
-            toggleWeddingSoundOptions();
-
-            // Listen for changes in the event type dropdown
-            eventTypeSelect.addEventListener('change', toggleWeddingSoundOptions);
-
             // Intersection Observer for reveal-on-scroll animations
             const revealElements = document.querySelectorAll('.reveal-on-scroll');
 
@@ -583,11 +473,6 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('is-visible');
-                        // If you want the animation to play only once, uncomment the line below
-                        // observer.unobserve(entry.target);
-                    } else {
-                        // Optional: remove is-visible class when element scrolls out of view
-                        // entry.target.classList.remove('is-visible');
                     }
                 });
             }, observerOptions);
